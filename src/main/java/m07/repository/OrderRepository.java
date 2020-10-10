@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+import m07.entity.Employee;
 import m07.entity.Order;
 
 //public interface OrderRepository extends CrudRepository<Order, Integer> {
@@ -28,4 +29,6 @@ public interface OrderRepository extends JpaRepository<Order, Integer> {
  // lọc đơn hàng có trạng thái đã hủy
     @Query(value = "select *from orders where status = \"Da huy\" ORDER BY id desc", nativeQuery = true)
     public List<Order> lisorderbydesc3 ();
+    
+
 }

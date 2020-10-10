@@ -161,7 +161,36 @@
             <version>1.1</version>
         </dependency>
 
-
+		    <!-- Excel 2003 (.xls) -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.17</version>
+		</dependency>
+ 
+		<!-- Excel 2007 (.xlsx) -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.17</version>
+		</dependency>
+		
+	<!-- 	<!-- paypal -->
+		<dependency>
+		    <groupId>com.paypal.sdk</groupId>
+		    <artifactId>rest-api-sdk</artifactId>
+		    <version>1.14.0</version>
+		</dependency>
+		
+		https://mvnrepository.com/artifact/com.google.code.gson/gson
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.3.1</version>
+		</dependency> -->
+				
     </dependencies>
 
     <build>
@@ -176,4 +205,7 @@
             </plugin>
         </plugins>
     </build>
+    
+
+
 </project>

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import m07.entity.Customer;
+import m07.entity.Employee;
 import m07.entity.Order;
 import m07.entity.OrderDetail;
 import m07.repository.CustomersRepository;
@@ -46,16 +47,16 @@ public class ReportController {
 
     @ModelAttribute("orderList")
     public List<OrderDetail> showOrder(Model model) {
-        List<OrderDetail> orderDetailList =
-                (List<OrderDetail>) orderDetailRepository.findAll();
+        List<OrderDetail> orderDetailList = (List<OrderDetail>) orderDetailRepository.findAll();
         return orderDetailList;
     }
 // don hang chua duyet
     @RequestMapping(value = "/admin/orderNew")
     public String showproorders(Model model){
-        List<Order> order =
-                (List<Order>) orderRepository.lisorderbydesc();
-        model.addAttribute("orders",order);
+        List<Order> listOrder = (List<Order>) orderRepository.lisorderbydesc();
+//        List<Employee> listEmployees = (List<Employee>) employeeRepository.listEmployee();
+//        model.addAttribute("employees", listEmployees);
+        model.addAttribute("orders",listOrder);
         return "/admin/order1";
     }
     
@@ -63,8 +64,7 @@ public class ReportController {
     @Transactional
     @RequestMapping(value = "/admin/orderShipping")
     public String showproorders1(Model model){
-        List<Order> orders =
-                (List<Order>) orderRepository.lisorderbydesc1();
+        List<Order> orders = (List<Order>) orderRepository.lisorderbydesc1();
         System.out.println("========================== OUTPUT DATA ==================");
         for (Order order : orders) {
         	System.out.println(order.toString());
@@ -76,8 +76,7 @@ public class ReportController {
     // don hang da hoan tat
     @RequestMapping(value = "/admin/orderFinish")
     public String showproorders2(Model model){
-        List<Order> order =
-                (List<Order>) orderRepository.lisorderbydesc2();
+        List<Order> order = (List<Order>) orderRepository.lisorderbydesc2();
         model.addAttribute("orders",order);
         return "/admin/order3";      
     }
@@ -85,8 +84,7 @@ public class ReportController {
     // don hang da huy
     @RequestMapping(value = "/admin/orderCancel")
     public String showproorders3(Model model){
-        List<Order> order =
-                (List<Order>) orderRepository.lisorderbydesc3();
+        List<Order> order = (List<Order>) orderRepository.lisorderbydesc3();
         model.addAttribute("orders",order);
         return "/admin/order4";
     }

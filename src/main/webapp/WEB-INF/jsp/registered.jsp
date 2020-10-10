@@ -54,6 +54,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <form:input path="phone" placeholder="Số điện thoại" required=" true"></form:input>
 				<form:input path="address" placeholder="Địa chỉ" required=" true"></form:input>
 				
+				<form:select itemValue="district" path="district" class="form-control" value ="${district}">												
+					<form:option value="Quận 1">Quận 1</form:option>
+					<form:option value="Quận 2">Quận 2</form:option>
+					<form:option value="Quận 3">Quận 3</form:option>
+					<form:option value="Quận 4">Quận 4</form:option>
+					<form:option value="Quận 5">Quận 5</form:option>
+					<form:option value="Quận 6">Quận 6</form:option>
+					<form:option value="Quận 7">Quận 7</form:option>
+					<form:option value="Quận 8">Quận 8</form:option>
+					<form:option value="Quận 9">Quận 9</form:option>
+					<form:option value="Quận 10">Quận 10</form:option>
+					<form:option value="Quận 11">Quận 11</form:option>
+					<form:option value="Quận 12">Quận 12</form:option>
+					<form:option value="Quận Thủ Đức">Quận Thủ Đức </form:option>
+					<form:option value="Quận Tân Phú">Quận Tân Phú</form:option>
+					<form:option value="Quận Gò Vấp">Quận Gò Vấp</form:option>
+					<form:option value="Quận Tân Bình">Quận Tân Bình</form:option>
+					<form:option value="Quận Bình Thạnh">Quận Bình Thạnh</form:option>
+					<form:option value="Quận Bình Tân">Quận Bình Tân</form:option>
+					<form:option value="Quận Phú Nhuận">Quận Phú Nhuận</form:option>
+				</form:select>
+				
                      <h6><spring:message code="Login" text="default text"/></h6>
 
                 <form:input path="id" placeholder="Tên Đăng Nhập" required=" true"></form:input>

@@ -52,17 +52,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
            <form:form action="checkout" method="post" modelAttribute="orderModel"> 
                 <form:input path="receiver" placeholder="Tên Người nhận"  required="true" value="${fullName}"></form:input>
                 <form:input path="address" placeholder="Địa Chỉ..." required="true" value="${address}"></form:input>
+                
+                <form:select itemValue="district" path="district" class="form-control" value ="${district}">												
+					<form:option value="Quận 1">Quận 1</form:option>
+					<form:option value="Quận 2">Quận 2</form:option>
+					<form:option value="Quận 3">Quận 3</form:option>
+					<form:option value="Quận 4">Quận 4</form:option>
+					<form:option value="Quận 5">Quận 5</form:option>
+					<form:option value="Quận 6">Quận 6</form:option>
+					<form:option value="Quận 7">Quận 7</form:option>
+					<form:option value="Quận 8">Quận 8</form:option>
+					<form:option value="Quận 9">Quận 9</form:option>
+					<form:option value="Quận 10">Quận 10</form:option>
+					<form:option value="Quận 11">Quận 11</form:option>
+					<form:option value="Quận 12">Quận 12</form:option>
+					<form:option value="Quận Thủ Đức">Quận Thủ Đức </form:option>
+					<form:option value="Quận Tân Phú">Quận Tân Phú</form:option>
+					<form:option value="Quận Gò Vấp">Quận Gò Vấp</form:option>
+					<form:option value="Quận Tân Bình">Quận Tân Bình</form:option>
+					<form:option value="Quận Bình Thạnh">Quận Bình Thạnh</form:option>
+					<form:option value="Quận Bình Tân">Quận Bình Tân</form:option>
+					<form:option value="Quận Phú Nhuận">Quận Phú Nhuận</form:option>
+				</form:select>
+				
                 <form:input path="phone" placeholder="Số diện thoại..." required="true" value="${phone}"></form:input>
-                <h6><spring:message code="INFORMATION" text="default text"/></h6>
+<%--                 <h6><spring:message code="INFORMATION" text="default text"/></h6>
                 <label>Ngày Giao Hàng</label>
                 <form:input type = "date" path="requireDate" required="true"></form:input>
-                <form:input path="description" placeholder="Mô Tả" ></form:input>
+  --%>               <form:input path="description" placeholder="Mô Tả" ></form:input>
                 <input type="submit" value = "Thanh toán">
             </form:form> 
                
         </div>
         <div class="register-home">
-            <a href="/">Home</a>
+            <a href="/">Trang chủ</a>
         </div>
     </div>
 </div>

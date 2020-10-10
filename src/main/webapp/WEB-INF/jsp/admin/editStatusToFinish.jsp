@@ -109,14 +109,14 @@
                                 </div>
                             </div>
 
-							<div class="row">
+							<%-- <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" style="display:none">
                                         <label>Ngay giao</label>                                         
-                                        <form:input path="requireDate" class="form-control"></form:input>
+                                        <form:input path="orderDate" class="form-control"></form:input>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --%>
                             
                             <div class="row">
                                 <div class="col-md-12">

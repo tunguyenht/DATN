@@ -32,6 +32,17 @@ public class Customer implements Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
+	@Nationalized 
+	private String district;
+	
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
+	}
 
 	Boolean enabled;
 	

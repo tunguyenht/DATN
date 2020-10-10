@@ -1,5 +1,6 @@
 package m07.entity;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import javax.persistence.Entity;
@@ -9,17 +10,27 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Nationalized;
 @Entity
 @Table(name="Employee")
-public class Employee {
+public class Employee implements Serializable {
 	@Id
 	@GeneratedValue
-	int id;
+	Integer id;
 	
+	@Nationalized
 	String LastName;
+	
+	@Nationalized
 	String FirstName;
+	
+	@Nationalized
 	String Sex;
+	
+	@Nationalized
 	String Adress;
+	
 	String Phone;
 	String Birthday;
 	String Email;
@@ -45,11 +56,11 @@ public class Employee {
 		this.receiptions = receiptions;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -117,4 +128,20 @@ public class Employee {
 		Password = password;
 	}
 
+	public Collection<Order> getOrder() {
+		return order;
+	}
+
+	public void setOrder(Collection<Order> order) {
+		this.order = order;
+	}
+
+	public Collection<Cmt_Emp> getCmt_emp() {
+		return cmt_emp;
+	}
+
+	public void setCmt_emp(Collection<Cmt_Emp> cmt_emp) {
+		this.cmt_emp = cmt_emp;
+	}
+	
 }

@@ -32,15 +32,19 @@ public class Order implements Serializable {
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern="MM/dd/yyyy")
 	Date orderDate;
-	@Temporal(TemporalType.DATE)
+/*	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern="MM/dd/yyyy")
 	Date requireDate;
-	
+	*/
 	@Nationalized
 	String receiver;
 	
 	@Nationalized
 	String address;
+	
+	@Nationalized
+	String district;
+	
 	String phone;
 	
 	@Nationalized
@@ -93,6 +97,14 @@ public class Order implements Serializable {
 		this.totalPrice = totalPrice;
 	}
 
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
+	}
+
 	@ManyToOne//thêm vô sửa cái gì lỗi customer?
 	@JoinColumn(name="customerId")
 	Customer customer;
@@ -128,13 +140,13 @@ public class Order implements Serializable {
 		this.orderDate = orderDate;
 	}
 
-	public Date getRequireDate() {
+/*	public Date getRequireDate() {
 		return requireDate;
 	}
 
 	public void setRequireDate(Date requireDate) {
 		this.requireDate = requireDate;
-	}
+	}*/
 
 	public String getReceiver() {
 		return receiver;
@@ -190,11 +202,10 @@ public class Order implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Order [Id=" + Id + ", orderDate=" + orderDate + ", requireDate=" + requireDate + ", receiver="
+		return "Order [Id=" + Id + ", orderDate=" + orderDate + ", requireDate=" + ", receiver="
 				+ receiver + ", address=" + address + ", phone=" + phone + ", description=" + description
 				+ ", totalPrice=" + totalPrice + ", status=" + status + ", customer=" + customer + ", orderDetails="
 				+ orderDetails + ", employee=" + employee + ", shipperId=" + shipperId + ", bill_Id=" + bill_Id + "]";
 	}
-	
 	
 }

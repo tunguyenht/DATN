@@ -62,8 +62,7 @@
                                         <label>Khách hàng</label>
                                         <form:input path="customer.id" class="form-control" readonly="true" ></form:input>
                                        
-                                    </div>
-                                                                       
+                                    </div>                                                                    
                                     
                                 </div>
                                 
@@ -109,15 +108,15 @@
                                 </div>
                             </div>
 
-							<div class="row">
+						<%-- 	<div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" style="display:none">
                                         <label>Ngay giao</label>                                         
-                                        <form:input path="requireDate" class="form-control"></form:input>
+                                        <form:input path="orderDate" class="form-control"></form:input>
                                     </div>
                                 </div>
                             </div>
-                            
+                             --%>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group" style="display:none">
@@ -146,14 +145,14 @@
                                 </div>
                                 
                                 <div class="col-md-6">
-										<div class="form-group">
-											<label>Trạng thái</label>
-											<form:select itemValue="status" path="status" class="form-control">												
-												<form:option value="Dang giao">DUYỆT</form:option>
-												<form:option value="Da huy">HỦY</form:option>
-											</form:select>
-										</div>
+									<div class="form-group">
+										<label>Trạng thái</label>
+										<form:select itemValue="status" path="status" class="form-control">												
+											<form:option value="Dang giao">DUYỆT</form:option>
+											<form:option value="Da huy">HỦY</form:option>
+										</form:select>
 									</div>
+								</div>
                             </div>
                             <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
                             <div class="clearfix"></div>
@@ -170,7 +169,6 @@
 
 </div>
 </div>
-
 
 </body>
 
